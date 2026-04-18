@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\StudentModel;
+use App\Models\StudentModel as Student;
 
 class StudentController extends Controller
 {
@@ -13,7 +13,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Student::all());
     }
 
     /**
